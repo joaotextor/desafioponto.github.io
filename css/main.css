@@ -1,21 +1,28 @@
 @import "uclasses.css";
 @import "cproperties.css";
+@import "components.css";
+
+:root {
+    font-size: 12px;
+}
+
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: grey;
+    background-color: #888;
+    color :#888;
     height: 100%;
     line-height: 1.1;
-    font-size: 12px;
-    font-family: "Helvetica";
+    font-family: "Helvetica"; /*! DIDN'T USE HELVETICA NEUE BECAUSE IS A PAID FONT AND NOT DEFAULT ON PCs*/
 }
+
+/** HEADER  */
 
 header {
     padding-block: 3em;
-    background-color: transparent;
-    height: 100px;
+    color: white;
     text-align: center;
 }
 
@@ -25,36 +32,71 @@ h1 {
 
 h1 p {
     font-size: 40px;
-    margin-block: 1rem;
+    margin-block: .25rem;
 }
 
-.container-top {
-    background-color: white;
-    margin-block: 300px;
-    z-index: 1000;
-    min-height: 50vh;
-    width: 100vw;
-    transform: skewY(5deg)
+/** CONTENT */
+
+article {
+    text-align: left;
 }
 
-.container-bottom {
-    position: absolute;
-    z-index: -1;
-    bottom: -200px;
-    background-color: white;
-    height: 500px;
-    width: 100vw;
-    transform: skewY(-10deg);
+article h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
 }
 
 .content {
-    padding-top: 2%;
+    margin-inline: auto;
+    padding-top: 5%;
+    max-width: 920px;
     transform: skewY(-5deg);
-    text-align: center;
 }
 
+.section-main {
+    gap: 60px;
+    grid-template-columns: 1.52fr 1fr;
+    line-height: 1.6rem;
+}
+
+/** CONTACT FORM */
+
+#signup > label:where(:not(:first-child)) {
+    padding-top: 1.2rem;
+}
+
+#signup label > input[type="text"] {
+    display: block;
+    margin-top: 5px;
+    width: 98%;
+    height: 30px;
+    border: 1px solid #888;
+}
+
+#signup .genre-wrapper {
+    padding-block: 1.25rem;
+    gap: 2rem;
+}
+
+#signup #genre {
+    height: 100%;
+    margin-top: -1px;
+    vertical-align: middle;
+}
+
+/** SHOP ITEMS */
+
+.shop-items {
+    column-gap: 3.5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+
+/** FOOTER  */
 
 footer {
     background-color: transparent;
     height: 10px;
 }
+

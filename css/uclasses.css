@@ -13,11 +13,32 @@
 
 /** ---------------------- */
 
+.flow > *:where(:not(:first-child)) { /*Apply margin-top to every element but the first, so it does not have double margins (from the margin-bottom from element before that).
+    It could be wrote without :where, but it would gain higher specificity, making difficult to overwrite. */
+    margin-top: var(--flow-space, 1rem);
+}
+
+.flow--space-small {
+    --flow-space: .5rem;
+}
+
 .flex {
     display: flex;
+}
+
+.grid {
+    display: grid;
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.fw-normal {
+    font-weight: normal;
+}
+
+.fw-bold {
+    font-weight: bold;
 }

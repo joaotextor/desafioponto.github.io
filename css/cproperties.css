@@ -1,11 +1,17 @@
 @import "main.css";
 
-/** FONT SIZE */
+/*~ CUSTOM PROPERTIES */
+
+
 
 :root {
+
+    /** FONT SIZE */
     --fs-14: 14px;
     --fs-16: 16px;
     --fs-18: 18px;
     --fs-20: 20px;
     --fs-40: 40px;
+
+    /*  */
 }

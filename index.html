@@ -11,17 +11,81 @@
         <header class="flex-column">
             <h1 class="fs-20">Uma seleção de produtos<p class="fs-40">especial para você</p></h1>
             <p class="fs-14">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
+            <nav class="nav-wrapper flex">
+                <button class="nav-btn">Conheça a Linx</button>
+                <button class="nav-btn">Ajude o algorítimo</button>
+                <button class="nav-btn">Seus produtos</button>
+                <button class="nav-btn">Compartilhe</button>
+            </nav>
         </header>
         <div class="container-top">
-            <div class="content">
-                <h1>Bom dia</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus ullam repudiandae! Eveniet fugiat minima odit delectus nihil ad neque repellendus ipsum corporis illo, ab voluptatem sint omnis ducimus nostrum?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatibus ullam repudiandae! Eveniet fugiat minima odit delectus nihil ad neque repellendus ipsum corporis illo, ab voluptatem sint omnis ducimus nostrum?</p>
+            <div class="content flex-column">
+                <section class="section-main grid">
+                    <article>
+                        <h2 class="fw-normal fs-20">Ajude o algorítimo a ser mais certeiro</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.</p> 
+                        <p>Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.</p>
+                    </article>
+                    <form id="signup" class="flex-column" action="">
+                        <label for="yourname">
+                            Seu nome:
+                            <input id="yourname" type="text">
+                        </label>
+                        <label for="email">
+                            E-mail:
+                            <input id="email" type="email">
+                        </label>
+                        <label for="cpf">
+                            CPF:
+                            <input id="cpf" type="text">
+                        </label>
+                        <div class="genre-wrapper flex">
+                            <label>
+                                <input id="genre" name="genre" type="radio" value="male">
+                                Masculino
+                            </label>
+                            <label>
+                                <input id="genre" name="genre" type="radio" value="female">
+                                Feminino
+                            </label>
+                        </div>
+                        <button class="body-button fs-16">Enviar</button>
+                    </form>
+                </section>
+                <div class="section-separator fs-18 flex"><h3>Sua seleção especial</h3></div>
+                <section class="shop-items grid">
+                    <article class="shop-item flex-column">
+                        <img src="#" alt="Item">
+                        <h4 class="fw-normal fs-14">Nome do produto</h4>
+                        <p>Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.</p>
+                        <p>De: R$ 23,99</p>
+                        <p class="fw-bold fs-16">Por: R$ 19,98</p>
+                        <p>ou 2x de R$ 9,99</p>
+                        <button class="body-button fs-16">Comprar</button>
+                    </article>
+                </section>
+                <button class="body-button btn-load-more fs-16">Ainda mais produtos aqui!</button>
+
+                <div class="section-separator fs-18 flex"><h3>Compartilhe a novidade</h3></div>
+
+                <section>
+                    <span>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</span>
+                    <form id="share" action="#">
+                        <div class="flex">
+                            <label for="friend-name">
+                                Seu nome:
+                                <input id="friend-name" type="text">
+                            </label>
+                            <label for="friend-email">
+                                E-mail:
+                                <input id="friend-email" type="email">
+                            </label>
+                        </div>
+                        <button class="body-button">Enviar Agora</button>
+                    </form>
+                </section>
             </div>
-            <div class="container-bottom">
-                
-                
-            </div>
+            <div class="container-bottom"></div>
         </div>
         
         <footer>
