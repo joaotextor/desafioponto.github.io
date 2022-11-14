@@ -1,5 +1,18 @@
 @import "main.css";
 
+/*~ UTILITY CLASSES */
+
+/** FONT SIZE */
+
+.fs-12  { font-size: var(--ff-12); }
+.fs-14 { font-size: var(--fs-14); }
+.fs-16 { font-size: var(--fs-16); }
+.fs-18 { font-size: var(--fs-18); }
+.fs-20 { font-size: var(--fs-20); }
+.fs-40 { font-size: var(--fs-40); }
+
+/** ---------------------- */
+
 .flex {
     display: flex;
 }

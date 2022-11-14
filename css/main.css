@@ -1,4 +1,5 @@
 @import "uclasses.css";
+@import "cproperties.css";
 
 body {
     margin: 0;
@@ -8,11 +9,14 @@ body {
     height: 100%;
     line-height: 1.1;
     font-size: 12px;
+    font-family: "Helvetica";
 }
 
 header {
+    padding-block: 3em;
     background-color: transparent;
     height: 100px;
+    text-align: center;
 }
 
 h1 {
