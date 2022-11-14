@@ -1,0 +1,56 @@
+@import "uclasses.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+    height: 100%;
+    line-height: 1.1;
+    font-size: 12px;
+}
+
+header {
+    background-color: transparent;
+    height: 100px;
+}
+
+h1 {
+    font-size: 20px
+}
+
+h1 p {
+    font-size: 40px;
+    margin-block: 1rem;
+}
+
+.container-top {
+    background-color: white;
+    margin-block: 300px;
+    z-index: 1000;
+    min-height: 50vh;
+    width: 100vw;
+    transform: skewY(5deg)
+}
+
+.container-bottom {
+    position: absolute;
+    z-index: -1;
+    bottom: -200px;
+    background-color: white;
+    height: 500px;
+    width: 100vw;
+    transform: skewY(-10deg);
+}
+
+.content {
+    padding-top: 2%;
+    transform: skewY(-5deg);
+    text-align: center;
+}
+
+
+footer {
+    background-color: transparent;
+    height: 10px;
+}
