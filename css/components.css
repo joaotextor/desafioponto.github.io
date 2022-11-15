@@ -91,7 +91,7 @@
     max-width: 201px;
 }
 
-.shop-item > * {
+.shop-item > div > * {
     margin-top: 0;
     margin-bottom: .75rem;
 }
@@ -103,8 +103,9 @@
     margin-bottom: 1.5rem;
 }
 
-.shop-item button {
+.shop-item > div > button {
     height: 30px;
+    width: 100%;
     padding-block: .5rem;
 }
 
@@ -115,3 +116,65 @@
     margin-bottom: 10.75rem;
 }
 
+@media (max-width: 420px) {
+    .container-top {
+        transform: skewY(17.5deg);
+    }
+    
+    .container-bottom {
+        bottom: -120px;
+        background-color: white;
+        transform: skewY(-22.5deg);
+    }
+    
+    .nav-wrapper {
+        z-index: 1000;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .section-separator {
+        margin-bottom: 3rem;
+    }
+
+    .section-separator::before {
+        margin-left: -1rem;
+        margin-right: .5rem;
+    }
+    
+    .section-separator::after {
+        margin-right: -1rem;
+        margin-left: .5rem;
+    }
+
+    .shop-item {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: row;
+    }
+
+    .shop-item img {
+        margin-block: 0;
+        width: 169px;
+        height: 129px;
+    }
+
+    .shop-item > div {
+        width: 200px;
+        padding-left: 2rem;
+        justify-content: space-between;
+    }
+
+    .shop-item .item-description {
+        display: none;
+    }
+    
+    .shop-item > div > button {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .btn-load-more {
+        margin-bottom: 4rem;
+    }
+}

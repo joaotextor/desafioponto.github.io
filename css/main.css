@@ -37,6 +37,13 @@ h1 p {
 
 /** CONTENT */
 
+.content {
+    margin-inline: auto;
+    padding-top: 5%;
+    max-width: 920px;
+    transform: skewY(-5deg);
+}
+
 article {
     text-align: left;
 }
@@ -44,13 +51,6 @@ article {
 article h2 {
     margin-top: 0;
     margin-bottom: 2rem;
-}
-
-.content {
-    margin-inline: auto;
-    padding-top: 5%;
-    max-width: 920px;
-    transform: skewY(-5deg);
 }
 
 .section-main {
@@ -154,21 +154,37 @@ footer p {
         text-align: left;
         padding-inline: 1rem;
     }
-
-    .nav-wrapper {
-        flex-wrap: wrap;
-        gap: 1.5rem;
-    }
-
     .content {
-        padding-inline: 1rem;
+        position: relative;
+        margin-top: -5rem;
+        padding-top: 8rem;
+        padding-inline: .5rem;
+        transform: skewY(-17.5deg);
     } 
     
     .section-main {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .shop-items {
+        grid-template-columns: 1fr;
+    }
+
+    .share-form {
+        padding-right: 1.5rem;
     }
 
     #share > div {
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    #share > div > div > label > input {
+        width: 100%;
+    }
+
+    footer {
+        bottom: -150px;
     }
 }
