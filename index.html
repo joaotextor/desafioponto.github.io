@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head class="flex-column">
         <title>Desafio HTML/CSS/JS - Curso JS Fullstack</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -68,18 +68,23 @@
 
                 <div class="section-separator fs-18 flex"><h3>Compartilhe a novidade</h3></div>
 
-                <section>
-                    <span>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</span>
+                <section class="share-form">
+                    <span class="fs-14">Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</span>
                     <form id="share" action="#">
                         <div class="flex">
-                            <label for="friend-name">
-                                Seu nome:
-                                <input id="friend-name" type="text">
-                            </label>
-                            <label for="friend-email">
-                                E-mail:
-                                <input id="friend-email" type="email">
-                            </label>
+                            <div class="flex-column">
+                                <label for="friend-name">
+                                    Nome do seu amigo:
+                                    <input id="friend-name" type="text">
+                                </label>
+                            </div>
+
+                            <div class="flex-column">
+                                <label for="friend-email">
+                                    E-mail:
+                                    <input id="friend-email" type="email">
+                                </label>
+                            </div>
                         </div>
                         <button class="body-button">Enviar Agora</button>
                     </form>
@@ -89,6 +94,10 @@
         </div>
         
         <footer>
+            
+                <p>Testando suas habilidades em HTML, CSS e JS.</p>
+                <p>Linx Impulse</p>
+                <p>2019</p>
 
         </footer>
     </body>

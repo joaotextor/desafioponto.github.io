@@ -1,19 +1,17 @@
 .container-top {
     background-color: white;
     margin-block: 25px;
-    z-index: 1000;
-    min-height: 50vh;
-    width: 100vw;
-    transform: skewY(5deg)
+    width: 100%;
+    transform: skewY(5deg);
 }
 
 .container-bottom {
     position: absolute;
     z-index: -1;
-    bottom: -200px;
+    bottom: -170px;
     background-color: white;
     height: 500px;
-    width: 100vw;
+    width: 100%;
     transform: skewY(-10deg);
 }
 
@@ -22,6 +20,7 @@
     border: 1px solid #707070;
     border-radius: 4px;
     padding-block: 1rem;
+    padding-inline: 3rem;
     height: 40px;
     color: #888;
     cursor: pointer;   
@@ -46,6 +45,7 @@
     border-radius: 4px;
     height: 40px;
     width: 160px;
+    cursor: pointer;
 }
 
 /** SECTION SEPARATOR */
@@ -111,7 +111,6 @@
 /* ------------------------------ */
 
 .btn-load-more {
-    padding-inline: 3rem;
     margin-inline: auto;
     margin-bottom: 10.75rem;
 }

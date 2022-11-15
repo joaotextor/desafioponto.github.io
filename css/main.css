@@ -65,7 +65,8 @@ article h2 {
     padding-top: 1.2rem;
 }
 
-#signup label > input[type="text"] {
+#signup label > input[type="text"],
+#signup label > input[type="email"]{
     display: block;
     margin-top: 5px;
     width: 98%;
@@ -91,12 +92,83 @@ article h2 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+/** SHARE FORM */
 
+.share-form {
+    text-align: center;
+}
+
+#share {
+    margin-top: 3.25rem;
+}
+
+#share > div {
+    gap: 3.33rem;
+    justify-content: center;
+    margin-bottom: 3.25rem;
+}
+
+#share > div > div {
+    text-align: left;
+}
+
+
+#share > div > div > label > input {
+    margin-top: .5rem;
+    display: block;
+    width: 340px;
+    height: 30px;
+    /* justify-self: left; */
+
+}
+
+#share > button {
+    margin-top: 1rem;
+    width: 21.67rem;
+}
 
 /** FOOTER  */
 
 footer {
-    background-color: transparent;
-    height: 10px;
+    position: relative;
+    z-index: 1000;
+    bottom: -250px;
+    color: white;
+    width: 100%;
+    height: fit-content;  
+    width: 100%;
+    padding-bottom: 2rem;    
+    text-align: center;
+
 }
 
+footer p {
+    width: 260px;
+    margin-inline: auto;
+    margin-block: .5rem;
+}
+
+@media (max-width: 420px) {
+
+    header {
+        text-align: left;
+        padding-inline: 1rem;
+    }
+
+    .nav-wrapper {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .content {
+        padding-inline: 1rem;
+    } 
+    
+    .section-main {
+        grid-template-columns: 1fr;
+    }
+
+    #share > div {
+        flex-direction: column;
+    }
+}
