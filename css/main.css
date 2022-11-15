@@ -148,7 +148,7 @@ footer p {
     margin-block: .5rem;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
 
     header {
         text-align: left;
@@ -188,3 +188,5 @@ footer p {
         bottom: -150px;
     }
 }
+
+/*! TODO: NEW MEDIA QUERY FOR 950px and below */
