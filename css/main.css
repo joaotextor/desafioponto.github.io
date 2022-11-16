@@ -148,6 +148,36 @@ footer p {
     margin-block: .5rem;
 }
 
+@media (max-width: 950px) {
+
+    .content {
+        padding-left: 1rem;
+    }
+    
+    .section-main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .shop-items {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    #share > div {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #share > div > div > label > input {
+        width: 100%;
+    }
+
+    .share-form {
+        padding-right: 1.5rem;
+    }
+}
+
 @media (max-width: 450px) {
 
     header {
@@ -161,32 +191,16 @@ footer p {
         padding-inline: .5rem;
         transform: skewY(-17.5deg);
     } 
-    
-    .section-main {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
 
     .shop-items {
         grid-template-columns: 1fr;
+    }
+   
+    footer {
+        bottom: -150px;
     }
 
     .share-form {
         padding-right: 1.5rem;
     }
-
-    #share > div {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    #share > div > div > label > input {
-        width: 100%;
-    }
-
-    footer {
-        bottom: -150px;
-    }
 }
-
-/*! TODO: NEW MEDIA QUERY FOR 950px and below */

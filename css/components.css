@@ -32,7 +32,12 @@
     margin-top: 2.5rem;
     justify-content: center;
     gap: 3rem;
-    
+    padding-inline: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-wrapper > div {
+    gap: 3rem;
 }
 
 .nav-wrapper > * {
@@ -164,7 +169,7 @@
     }
 
     .shop-item > div {
-        width: 180px;
+        width: 60%;
         padding-left: 1.5rem;
         justify-content: space-between;
     }
@@ -182,5 +187,3 @@
         margin-bottom: 4rem;
     }
 }
-
-/*! TODO: NEW MEDIA QUERY FOR 950px and below */
