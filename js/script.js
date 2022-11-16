@@ -4,28 +4,21 @@ itemList = document.querySelector('.shop-items')
 
 //~ COMMON VARIABLES
 
-let products = 'oiaa'
+let products = ''
 let nextPage = ''
 
 //~ FUNCTIONS
 
-function toJson(response) {
+const toJson = (response) => {
     return response.json()
 }
 
-function showError() {
-    console.log('Página não encontrada!')
-}
-
-async function populateItems(url) {
-    const shopItems = await fetch(url)
-    .then(toJson)
-    .catch(showError)
-
+const assignVariables = (shopItems) => {
     products = shopItems.products
     nextPage = shopItems.nextPage
+}
 
-
+const assembleHtml = () => {
     btnLoadMore.onclick = () => populateItems(`http://${nextPage}`)
     products.forEach((product) => {
         let halfPrice = 0
@@ -49,6 +42,18 @@ async function populateItems(url) {
         </article>
         `
     })
+}
+
+const showError = () => {
+    console.log('Página não encontrada!')
+}
+
+const populateItems = async (url) => {
+    await fetch(url)
+    .then(toJson)
+    .then(assignVariables)
+    .then(assembleHtml)
+    .catch(showError)
 }
 
 //~ FUNCTION ATTRIBUTION
