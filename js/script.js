@@ -17,17 +17,15 @@ function showError() {
     console.log('Página não encontrada!')
 }
 
-const fetchItems = async (url) => {
+async function populateItems(url) {
     const shopItems = await fetch(url)
     .then(toJson)
     .catch(showError)
 
     products = shopItems.products
     nextPage = shopItems.nextPage
-}
 
-async function populateItems(url) {
-    await fetchItems(url)
+
     btnLoadMore.onclick = () => populateItems(`http://${nextPage}`)
     products.forEach((product) => {
         let halfPrice = 0
@@ -51,7 +49,6 @@ async function populateItems(url) {
         </article>
         `
     })
-
 }
 
 //~ FUNCTION ATTRIBUTION
