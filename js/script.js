@@ -19,7 +19,8 @@ const assignVariables = (shopItems) => {
 }
 
 const assembleHtml = () => {
-    btnLoadMore.onclick = () => populateItems(`http://${nextPage}`)
+    btnLoadMore.onclick = () => populateItems(`https://${nextPage}`)
+    console.log(`https://${nextPage}`)
     products.forEach((product) => {
         let halfPrice = 0
         
