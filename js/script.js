@@ -19,7 +19,7 @@ const inputFriendEmail = document.getElementById('friend-email')
 let products = ''
 let nextPage = ''
 
-//~ FORM VALIDATION
+//~ SIGNUP FORM VALIDATION
 
 
 signupForm.onsubmit = (event) => {
@@ -59,6 +59,7 @@ signupForm.onsubmit = (event) => {
     : alert('Por favor, preencha corretamente os campos em vermelho!')  
 }
 
+//~ SHARE FORM VALIDATION
 shareForm.onsubmit = (event) => {
     event.preventDefault()
     let err = false

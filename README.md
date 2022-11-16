@@ -17,4 +17,4 @@
 <p>Contudo, com essa solução, vieram outros problemas, tais como o tamanho de cada div para que ambas se sobrepusessem corretamente, sem deixar um espaço e demonstrar o fundo cinza.</p>
 <p>Apesar de não estar inteiramente satisfeito com essa abordagem, ela funciona no caso concreto, independentemente de quanto conteúdo tiver na página (embora se for pouco conteúdo, o tamanho das divs deve ser readequado para não originar problemas com a sobreposição).</p>
 
-## [Live Preview](#)
+## [Live Preview](https://joaotextor.github.io/desafioponto.github.io/)
