@@ -24,8 +24,6 @@ const fetchItems = async (url) => {
 
     products = shopItems.products
     nextPage = shopItems.nextPage
-
-    console.log(shopItems) //! APAGAR DEPOIS
 }
 
 async function populateItems(url) {
@@ -59,3 +57,5 @@ async function populateItems(url) {
 //~ FUNCTION ATTRIBUTION
 
 window.onload = () => populateItems('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
+
+//! TODO:  Field validations
