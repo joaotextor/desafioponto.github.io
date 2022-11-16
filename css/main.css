@@ -69,7 +69,7 @@ article h2 {
 #signup label > input[type="email"]{
     display: block;
     margin-top: 5px;
-    width: 98%;
+    width: 99%;
     height: 30px;
     border: 1px solid #888;
 }
@@ -151,7 +151,7 @@ footer p {
 @media (max-width: 950px) {
 
     .content {
-        padding-left: 1rem;
+        padding-inline: 1rem;
     }
     
     .section-main {
@@ -160,6 +160,8 @@ footer p {
     }
 
     .shop-items {
+        column-gap: 0;
+        padding-inline: 1rem;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
     }
@@ -197,7 +199,8 @@ footer p {
     }
    
     footer {
-        bottom: -150px;
+        bottom: -130px;
+        padding-bottom: .5rem;
     }
 
     .share-form {

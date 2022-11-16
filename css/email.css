@@ -1,0 +1,32 @@
+@import "main.css";
+
+header {
+    padding-inline: 10rem;
+}
+
+.content {
+    padding-inline: 2rem;
+    max-width: 600px;
+}
+
+.shop-items {
+    padding-inline: 5rem;
+    margin-top: 3rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+#btn-load-more {
+    margin-bottom: 0;
+}
+
+.container-top {
+
+}
+
+.container-bottom {
+    bottom: -90px;
+}
+
+footer {
+    bottom: -130px;
+}
