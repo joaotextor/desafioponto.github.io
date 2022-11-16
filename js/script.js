@@ -1,13 +1,94 @@
 //~ CACHE ELEMENTS
-btnLoadMore = document.getElementById('btn-load-more')
-itemList = document.querySelector('.shop-items')
+const btnLoadMore = document.getElementById('btn-load-more')
+const itemList = document.querySelector('.shop-items')
+
+//* FORM ELEMENTS FOR VALIDATION
+
+const signupForm = document.getElementById('signup')
+const shareForm = document.getElementById('share')
+const inputName = document.getElementById('yourname')
+const inputCpf = document.getElementById('cpf')
+const inputEmail = document.getElementById('email')
+const genreWrapper = document.querySelector('.genre-wrapper')
+const rdGenre = document.querySelectorAll('input[name="genre"]')
+const inputFriendName = document.getElementById('friend-name')
+const inputFriendEmail = document.getElementById('friend-email')
 
 //~ COMMON VARIABLES
 
 let products = ''
 let nextPage = ''
 
+//~ FORM VALIDATION
+
+
+signupForm.onsubmit = (event) => {
+    event.preventDefault()
+    let err = false
+    
+    if (!inputName.value) {
+        err = true
+        inputName.classList.add('showError')  
+    } else {
+        inputName.classList.remove('showError') 
+    }
+
+    if (!inputEmail.value) {
+        err = true
+        inputEmail.classList.add('showError')  
+    } else {
+        inputEmail.classList.remove('showError') 
+    }
+    
+    if (!inputCpf.value) {
+        err = true
+        inputCpf.classList.add('showError')  
+    } else {
+        inputCpf.classList.remove('showError') 
+    }
+    
+    if (!rdGenre[0].checked && !rdGenre[1].checked) {
+        err = true
+        genreWrapper.classList.add('showError')  
+    } else {
+        genreWrapper.classList.remove('showError')  
+    }
+
+    !err 
+    ? signupForm.submit() 
+    : alert('Por favor, preencha corretamente os campos em vermelho!')  
+}
+
+shareForm.onsubmit = (event) => {
+    event.preventDefault()
+    let err = false
+
+    if (!inputFriendName.value) {
+        err = true
+        inputFriendName.classList.add('showError')  
+    } else {
+        inputFriendName.classList.remove('showError') 
+    }
+
+    if (!inputFriendEmail.value) {
+        err = true
+        inputFriendEmail.classList.add('showError')  
+    } else {
+        inputFriendEmail.classList.remove('showError') 
+    }
+
+    !err 
+    ? signupForm.submit() 
+    : alert('Por favor, preencha corretamente os campos em vermelho!') 
+}
+
+
 //~ FUNCTIONS
+
+//! ---------------------------
+//! -------- FETCH API --------
+//! ---------------------------
+
 
 const toJson = (response) => {
     return response.json()
@@ -55,6 +136,10 @@ const populateItems = async (url) => {
     .then(assembleHtml)
     .catch(showError)
 }
+
+//! ---------------------------
+//! ---------------------------
+//! ---------------------------
 
 //~ FUNCTION ATTRIBUTION
 

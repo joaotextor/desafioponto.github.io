@@ -42,3 +42,8 @@
 .fw-bold {
     font-weight: bold;
 }
+
+.showError {
+    outline: 1px solid red;
+    color: red;
+}
