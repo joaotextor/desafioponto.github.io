@@ -1,6 +1,9 @@
+//Commentaries are better read with Better Comments exetension (VS Code)
+import {replaceDotForComma} from "./script.js"
+
 //~ CACHE ELEMENTS
-btnLoadMore = document.getElementById('btn-load-more')
-itemList = document.querySelector('.shop-items')
+let btnLoadMore = document.getElementById('btn-load-more')
+let itemList = document.querySelector('.shop-items')
 
 //~ COMMON VARIABLES
 
@@ -58,5 +61,3 @@ const populateItems = async (url) => {
 //~ FUNCTION ATTRIBUTION
 
 window.onload = () => populateItems('https://frontend-intern-challenge-api.iurykrieger.vercel.app/products?page=1')
-
-//! TODO:  Field validations
