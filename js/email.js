@@ -1,35 +1,9 @@
 //Commentaries are better read with Better Comments exetension (VS Code)
-import {replaceDotForComma} from "./script.js"
-
-//~ CACHE ELEMENTS
-let btnLoadMore = document.getElementById('btn-load-more')
-let itemList = document.querySelector('.shop-items')
-
-//~ COMMON VARIABLES
-
-let products = ''
-let nextPage = ''
-
-//~ FUNCTIONS
-
-const toJson = (response) => {
-    return response.json()
-}
-
-const assignVariables = (shopItems) => {
-    products = shopItems.products
-    nextPage = shopItems.nextPage
-}
+import { products, nextPage, btnLoadMore, itemList, replaceDotForComma, assignVariables, showError } from "./exports.js"
 
 const assembleHtml = () => {
-    for (i=0; i < 2; i++) {
-        let halfPrice = 0
-        
-        //* replace '.' for ',' and add zero(es) after the number
-        products[i].price % 2 == 0 
-        ? halfPrice = (products[i].price / 2).toString()+',00' 
-        : halfPrice = (products[i].price / 2).toString().replace(".", ",")+'0'
-    
+
+    for (let i=0; i < 2; i++) {  
         itemList.innerHTML += `
         <article class="shop-item flex-column">
             <img src="${products[i].image}" alt="Item">
@@ -38,7 +12,7 @@ const assembleHtml = () => {
                 <p class="item-description">${products[i].description}</p>
                 <p>De: ${products[i].oldPrice},00</p>
                 <p class="fw-bold fs-16">Por: ${products[i].price},00</p>
-                <p>ou 2x de ${halfPrice}</p>
+                <p>ou 2x de ${replaceDotForComma(products[i].price)}</p>
                 <button class="body-button fs-16">Comprar</button>
             </div>
         </article>
@@ -46,13 +20,9 @@ const assembleHtml = () => {
     }
 }
 
-const showError = () => {
-    console.log('Página não encontrada!')
-}
-
 const populateItems = async (url) => {
     await fetch(url)
-    .then(toJson)
+    .then((res) => res.json())
     .then(assignVariables)
     .then(assembleHtml)
     .catch(showError)

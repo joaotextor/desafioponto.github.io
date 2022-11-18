@@ -1,7 +1,6 @@
 //Commentaries are better read with Better Comments exetension (VS Code)
 //~ CACHE ELEMENTS
-const btnLoadMore = document.getElementById('btn-load-more')
-const itemList = document.querySelector('.shop-items')
+import { products, nextPage, btnLoadMore, itemList, replaceDotForComma, assignVariables, showError } from "./exports.js"
 
 //* FORM ELEMENTS FOR VALIDATION
 
@@ -14,11 +13,6 @@ const genreWrapper = document.querySelector('.genre-wrapper')
 const rdGenre = document.querySelectorAll('input[name="genre"]')
 const inputFriendName = document.getElementById('friend-name')
 const inputFriendEmail = document.getElementById('friend-email')
-
-//~ COMMON VARIABLES
-
-let products = ''
-let nextPage = ''
 
 //~ SIGNUP FORM VALIDATION
 
@@ -85,20 +79,7 @@ shareForm.onsubmit = (event) => {
 }
 
 
-//~ FUNCTIONS
-
-export const replaceDotForComma = (number) => {
-    if (number % 2 == 0) {
-        return (number / 2).toString()+`,00`
-    } else {
-        return (number / 2).toString().replace(".", ",")+`0`
-    }
-}
-
-export const assignVariables = (shopItems) => {
-    products = shopItems.products
-    nextPage = shopItems.nextPage
-}
+//~ FUNCTION
 
 const assembleHtml = () => {
     btnLoadMore.onclick = () => populateItems(`https://${nextPage}`)
@@ -117,10 +98,6 @@ const assembleHtml = () => {
         </article>
         `
     })
-}
-
-const showError = () => {
-    console.log('Página não encontrada!')
 }
 
 const populateItems = async (url) => {
